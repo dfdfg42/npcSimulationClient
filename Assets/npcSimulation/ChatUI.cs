@@ -22,7 +22,7 @@ public class ChatUI : MonoBehaviour
     public GameObject systemMessagePrefab; // 시스템 메시지 프리팹
 
     [Header("채팅 설정")]
-    public int maxMessages = 50; // 최대 메시지 수
+    public int maxMessages = 7; // 최대 메시지 수
     public float autoScrollDelay = 0.1f; // 자동 스크롤 딜레이
     public bool enableTypingEffect = true; // 타이핑 효과 활성화
     public float typingSpeed = 0.05f; // 타이핑 속도

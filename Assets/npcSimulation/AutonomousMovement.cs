@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using TMPro;
+using System.Collections.Generic;
 
 [System.Serializable]
 public class SimpleNPCStatus
@@ -380,5 +381,15 @@ public class AutonomousMovement : MonoBehaviour
         // 도착 거리 표시
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, arrivalDistance);
+    }
+
+    public List<string> GetLocationNames()
+    {
+        if (locationMap == null || locationMap.Count == 0)
+        {
+            // locationMap이 초기화되지 않았다면 초기화
+            InitializeLocationMap();
+        }
+        return new List<string>(locationMap.Keys);
     }
 }
